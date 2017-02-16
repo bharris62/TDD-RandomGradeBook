@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Test;
 import static junit.framework.TestCase.assertTrue;
 
@@ -24,6 +25,25 @@ public class GradeBookTest {
         }
     }
 
+    @Test
+    public void checkIfLetterCorrespondsToRightNumber(){
+        GradeBook gb = new GradeBook();
+        assertTrue(gb.getNumberGrade('A') == 90);
+        assertTrue(gb.getNumberGrade('B') == 80);
+        assertTrue(gb.getNumberGrade('C') == 70);
+        assertTrue(gb.getNumberGrade('D') == 60);
+        assertTrue(gb.getNumberGrade('F') == 50);
 
+    }
+
+    @Test
+    public void checkIfEachStudentIsInHash(){
+        GradeBook gb = new GradeBook();
+
+        gb.createMap("Cole");
+        assertTrue(gb.gradeBook != null);
+        assertTrue(gb.gradeBook.size() == 1);
+        assertTrue(gb.gradeBook.size() != 2);
+    }
 
 }

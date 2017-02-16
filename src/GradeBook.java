@@ -4,10 +4,9 @@ import java.util.HashMap;
 import java.util.Random;
 
 public class GradeBook {
-
+    static Map<String, List<String>> gradeBook = new HashMap<>();
 
     public void createMap(String name){
-        Map<String, List<String>> gradeBook = new HashMap<>();
 
         ArrayList<String> letterGrade = new ArrayList<>();
         for(int i =0; i < 10; i++) {
