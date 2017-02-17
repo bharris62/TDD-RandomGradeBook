@@ -14,7 +14,6 @@ public class GradeBookTest {
 
     }
 
-    //number should always be between 0 and 12
     @Test
     public void checkLogicOnRandomNumber(){
         GradeBook gb = new GradeBook();
@@ -44,6 +43,12 @@ public class GradeBookTest {
         assertTrue(gb.gradeBook != null);
         assertTrue(gb.gradeBook.size() == 1);
         assertTrue(gb.gradeBook.size() != 2);
+    }
+
+    @Test
+    public void getAverageTest(){
+        GradeBook gb = new GradeBook();
+        assertTrue(gb.getAverage(100,10) == 10.00);
     }
 
 }

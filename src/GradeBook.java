@@ -13,6 +13,7 @@ public class GradeBook {
             letterGrade.add(getGrade(createRandomNum()));
         }
         gradeBook.put(name, letterGrade);
+
         printPrettyMap((HashMap<String, List<String>>) gradeBook);
 
     }
@@ -33,6 +34,13 @@ public class GradeBook {
         }
     }
 
+    public double getAverage(int numberOfGrades, double numericGrade) {
+
+
+        return 0.0;
+    }
+
+
     public int getNumberGrade(char letter){
         int letterGrade = 0;
         switch (letter){
@@ -50,7 +58,6 @@ public class GradeBook {
         return letterGrade;
     }
 
-
     public void assignStudent(){
         String[] student = {"Joe", "Sally", "Adam", "Sue", "Alex", "Jacob"};
         System.out.println("Name        GRADES            AVG");
@@ -59,7 +66,6 @@ public class GradeBook {
         }
     }
 
-
     public int createRandomNum(){
         Random rand = new Random();
         int x = rand.nextInt(13);
@@ -67,8 +73,6 @@ public class GradeBook {
         return x;
     }
 
-
-    //
     public String getGrade(int randNum){
         String[] grades = {"A","A+","A-","B","B+","B-","C","C+","C-","D","D+","D-","F"};
 
